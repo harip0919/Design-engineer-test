@@ -1,15 +1,22 @@
+import { Ionicons } from '@expo/vector-icons';
 import { StyleSheet, Text, View } from 'react-native';
+
+type IconName = React.ComponentProps<typeof Ionicons>['name'];
 
 type StatCardProps = {
   label: string;
   value: number;
+  icon: IconName;
+  background: string;
 };
 
-export function StatCard({ label, value }: StatCardProps) {
+export function StatCard({ label, value, icon, background }: StatCardProps) {
   return (
-    <View style={styles.card}>
+    <View style={[styles.card, { backgroundColor: background }]}>
       <View style={styles.labelRow}>
-        <View style={styles.iconPlaceholder} />
+        <View style={styles.iconContainer}>
+          <Ionicons name={icon} size={20} color="#FFFFFF" />
+        </View>
         <Text style={styles.label}>{label}</Text>
       </View>
       <Text style={styles.value}>{value}</Text>
@@ -25,18 +32,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: '#74A1CD',
   },
   labelRow: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 10,
   },
-  iconPlaceholder: {
-    width: 24,
-    height: 24,
-    borderRadius: 6,
-    backgroundColor: 'rgba(255,255,255,0.35)',
+  iconContainer: {
+    width: 28,
+    height: 28,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   label: {
     fontSize: 16,
