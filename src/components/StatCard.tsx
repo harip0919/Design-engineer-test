@@ -1,7 +1,8 @@
 import { Ionicons } from '@expo/vector-icons';
+import type { ComponentProps } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-type IconName = React.ComponentProps<typeof Ionicons>['name'];
+type IconName = ComponentProps<typeof Ionicons>['name'];
 
 type StatCardProps = {
   label: string;
