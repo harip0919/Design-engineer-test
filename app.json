@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "Design Engineer Test",
+    "slug": "design-engineer-test",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#F8FAFC"
+    },
+    "assetBundlePatterns": ["**/*"]
+  }
+}
