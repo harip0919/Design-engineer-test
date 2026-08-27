@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  background: #f2f4f8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-width: 320px;
+  background: #f2f4f8;
+}
+
+.home {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: #f2f4f8;
+}
+
+.hero {
+  width: 100%;
+  padding-bottom: 24px;
+  background: #2f70b5;
+}
+
+.status-bar {
+  height: 44px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.status-icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-icons img {
+  display: block;
+  width: 18px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.status-icons img:last-child {
+  width: 24px;
+}
+
+.header-bar {
+  height: 56px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+}
+
+.header-bar h1 {
+  margin: 0;
+  width: 100%;
+  font-size: 18px;
+  line-height: normal;
+  font-weight: 700;
+}
+
+.greeting {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.greeting p {
+  margin: 0;
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 400;
+}
+
+.greeting .time {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.stats {
+  width: 100%;
+  padding: 16px;
+}
+
+.stats-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stat-card {
+  min-height: 72px;
+  width: 100%;
+  padding: 0 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat-content > span {
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.stat-icon {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.stat-icon img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.stat-card strong {
+  font-size: 28px;
+  line-height: normal;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (min-width: 600px) {
+  .home {
+    max-width: 390px;
+    margin: 0 auto;
+  }
+}
